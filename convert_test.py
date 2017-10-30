@@ -13,9 +13,6 @@ class ConvertTest(unittest.TestCase):
     def test_atoi_negative_integer(self):
         self.assertEqual(atoi("-2"), -2)
 
-    def test_atoi_zero_integer(self):
-        self.assertEqual(atoi("-2"), -2)
-
     def test_atoi_decimal(self):
         with self.assertRaises(ValueError):
             self.assertEqual(atoi("0.0"), 0)
