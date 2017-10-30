@@ -3,6 +3,7 @@
 
 atoi = int
 
+
 def itoa(integer):
     try:
         if int(integer) == integer:

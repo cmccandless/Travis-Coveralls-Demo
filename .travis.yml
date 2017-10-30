@@ -1,7 +1,9 @@
 sudo: false
 
+# Language of your repository
 language: python
 
+# Language versions for Travis to test
 python:
   - 2.7
   - 3.3
@@ -10,17 +12,21 @@ python:
   - 3.6
   - nightly
 
+# Test matrix settings
 matrix:
+  # Ignore failures for unstable versions
   allow_failures:
     - python: nightly
 
+# Install dependencies here (apt-get, pip, etc.)
 install:
   - pip install -r requirements-travis.txt
 
+# Code style checks are often run here
+# See http://flake8.pycqa.org/en/latest/ for more info on flake8
 before_script:
   - flake8
 
+# Call your CI script here
 script:
-  - coverage run -m pytest -v
-
-after_success: coveralls
+  - pytest -v
