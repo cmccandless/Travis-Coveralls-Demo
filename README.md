@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/cmccandless/Travis-Coveralls-Demo.svg?branch=master)](https://travis-ci.org/cmccandless/Travis-Coveralls-Demo) [![Coverage Status](https://coveralls.io/repos/github/cmccandless/Travis-Coveralls-Demo/badge.svg?branch=master)](https://coveralls.io/github/cmccandless/Travis-Coveralls-Demo?branch=master)
+
 # Travis-Coveralls-Demo
 
 Tutorial for setting up a new Github Repository with [Travis-CI](https://travis-ci.org/) and [Coveralls](https://coveralls.io/) support.
@@ -71,3 +73,14 @@ script:
 ##### 4.1.2) [Follow steps here](https://coveralls.io/github/cmccandless/Travis-Coveralls-Demo)
 
 #### 4.2) Trigger another new Travis-CI build
+
+### 5) (Optional) Add badges to repository README
+
+#### Travis-CI
+
+Click on the badge 
+[![Build Status](https://travis-ci.org/cmccandless/Travis-Coveralls-Demo.svg?branch=master)](https://travis-ci.org/cmccandless/Travis-Coveralls-Demo) on your build results page.
+
+#### Coveralls
+
+Click on "EMBED" next to [![Coverage Status](https://coveralls.io/repos/github/cmccandless/Travis-Coveralls-Demo/badge.svg?branch=master)](https://coveralls.io/github/cmccandless/Travis-Coveralls-Demo?branch=master) inside the "BADGE YOUR REPO: \<repository\>" banner at the bottom of your Coveralls build results page.
