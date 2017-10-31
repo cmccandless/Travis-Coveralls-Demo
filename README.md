@@ -78,7 +78,19 @@ on your build results page.
 
 Follow steps at `https://coveralls.io/github/USERNAME/REPOSITORY`
 
-#### 4.2) Run coverage and coveralls in Travis-CI build
+#### 4.2) Configure coverage
+
+.coveragerc
+
+```ini
+[report]
+omit =
+    */python?.?/*
+    *__init__*
+    *_test.py
+```
+
+#### 4.3) Run coverage and coveralls in Travis-CI build
 
 ``` YML
 # Call your CI script here
@@ -89,9 +101,9 @@ script:
 after_success: coveralls
 ```
 
-#### 4.3) Trigger another new Travis-CI build
+#### 4.4) Trigger another new Travis-CI build
 
-#### 4.4) (Optional) Add badge to repository README
+#### 4.5) (Optional) Add badge to repository README
 
 Click on "EMBED" next to
 [![Coverage Status](https://coveralls.io/repos/github/cmccandless/Travis-Coveralls-Demo/badge.svg?branch=master)](https://coveralls.io/github/cmccandless/Travis-Coveralls-Demo?branch=master)
