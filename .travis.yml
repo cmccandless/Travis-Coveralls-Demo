@@ -30,5 +30,6 @@ before_script:
 # Call your CI script here
 script:
   - python -m pytest -v
+  - coverage run -m pytest -v
 
 after_success: coveralls

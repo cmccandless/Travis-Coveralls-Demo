@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/cmccandless/Travis-Coveralls-Demo.svg?branch=master)](https://travis-ci.org/cmccandless/Travis-Coveralls-Demo) [![Coverage Status](https://coveralls.io/repos/github/cmccandless/Travis-Coveralls-Demo/badge.svg?branch=master)](https://coveralls.io/github/cmccandless/Travis-Coveralls-Demo?branch=master)
-
 # Travis-Coveralls-Demo
+
+[![Build Status](https://travis-ci.org/cmccandless/Travis-Coveralls-Demo.svg?branch=master)](https://travis-ci.org/cmccandless/Travis-Coveralls-Demo) [![Coverage Status](https://coveralls.io/repos/github/cmccandless/Travis-Coveralls-Demo/badge.svg?branch=master)](https://coveralls.io/github/cmccandless/Travis-Coveralls-Demo?branch=master)
 
 Tutorial for setting up a new Github Repository with [Travis-CI](https://travis-ci.org/) and [Coveralls](https://coveralls.io/) support.
 
@@ -66,21 +66,33 @@ script:
 
 #### 3.3) Trigger a new build manually or by pushing new commits
 
+#### 3.4) (Optional) Add badge to repository README
+
+Click on the badge
+[![Build Status](https://travis-ci.org/cmccandless/Travis-Coveralls-Demo.svg?branch=master)](https://travis-ci.org/cmccandless/Travis-Coveralls-Demo)
+on your build results page.
+
 ### 4) Coveralls
 
 #### 4.1) Enable
 
-##### 4.1.2) [Follow steps here](https://coveralls.io/github/cmccandless/Travis-Coveralls-Demo)
+Follow steps at `https://coveralls.io/github/USERNAME/REPOSITORY`
 
-#### 4.2) Trigger another new Travis-CI build
+#### 4.2) Run coverage and coveralls in Travis-CI build
 
-### 5) (Optional) Add badges to repository README
+``` YML
+# Call your CI script here
+script:
+  - python -m pytest -v
+  - coverage run -m pytest -v
 
-#### Travis-CI
+after_success: coveralls
+```
 
-Click on the badge 
-[![Build Status](https://travis-ci.org/cmccandless/Travis-Coveralls-Demo.svg?branch=master)](https://travis-ci.org/cmccandless/Travis-Coveralls-Demo) on your build results page.
+#### 4.3) Trigger another new Travis-CI build
 
-#### Coveralls
+#### 4.4) (Optional) Add badge to repository README
 
-Click on "EMBED" next to [![Coverage Status](https://coveralls.io/repos/github/cmccandless/Travis-Coveralls-Demo/badge.svg?branch=master)](https://coveralls.io/github/cmccandless/Travis-Coveralls-Demo?branch=master) inside the "BADGE YOUR REPO: \<repository\>" banner at the bottom of your Coveralls build results page.
+Click on "EMBED" next to
+[![Coverage Status](https://coveralls.io/repos/github/cmccandless/Travis-Coveralls-Demo/badge.svg?branch=master)](https://coveralls.io/github/cmccandless/Travis-Coveralls-Demo?branch=master)
+inside the "BADGE YOUR REPO: \<repository\>" banner at the bottom of your Coveralls build results page.
